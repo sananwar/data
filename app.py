@@ -1,13 +1,19 @@
 import streamlit as st
+from data import get_data
 
-# Titel van de app
-st.title("Mijn eerste Streamlit app")
+st.title("🎈 Simpele Streamlit App met Data")
 
-# Invoer van de gebruiker
-naam = st.text_input("Wat is je naam?")
+# Data ophalen via data.py
+df = get_data()
 
-# Als er een naam is ingevuld, geef een begroeting
-if naam:
-    st.success(f"Hallo {naam}! Ik hou van jou! <3 xoxoxox")
-else:
-    st.info("Vul je naam hierboven in om verder te gaan.")
+st.write("Hier is de data uit het andere bestand:")
+st.dataframe(df)
+
+# Extra interactie
+stad = st.selectbox("Filter op stad:", df["Stad"].unique())
+
+filtered_df = df[df["Stad"] == stad]
+st.write("Geselecteerde resultaten:")
+st.table(filtered_df)
+
+# streamlit run app.py

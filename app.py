@@ -1,13 +1,13 @@
 import streamlit as st
 
 # Titel van de app
-st.title("Douchen met Sex")
+st.title("Mijn eerste Streamlit app")
 
 # Invoer van de gebruiker
-naam = st.text_input("Wil je dat ik ga douchen?")
+naam = st.text_input("Wat is je naam?")
 
 # Als er een naam is ingevuld, geef een begroeting
-if naam == "Ja":
-    st.success(f"Isgoed, kom naar de badkamer. Dan kunnen we samen douchen")
+if naam == "Ruveyda":
+    st.success(f"Salam Alaikom habiba {naam}! Ik hou van jou! <3 xoxoxox")
 else:
-    st.info("Dit is je kans.")
+    st.info("Fy bitch")

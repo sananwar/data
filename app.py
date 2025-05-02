@@ -10,4 +10,4 @@ naam = st.text_input("Wat is je naam?")
 if naam == "Ruveyda":
     st.success(f"Salam Alaikom habiba {naam}! Ik hou van jou! <3 xoxoxox")
 else:
-    st.info("Fy bitch")
+    print("Fy bitch")

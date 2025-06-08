@@ -20,9 +20,13 @@ Door gebruik te maken van historische data en verwachte groei in huishoudens, kr
 
 Scrol omlaag om de modelresultaten en interactieve grafieken te bekijken.
 """)
-# === 1. Data inladen ===
-excel_path = "Data onderzoek Anwar NIEUW.xlsx"
-xls = pd.ExcelFile(excel_path)
+
+try:
+    excel_path = "Data onderzoek Anwar NIEUW.xlsx"
+    xls = pd.ExcelFile(excel_path)
+    ...
+except Exception as e:
+    st.error(f"Er ging iets mis bij het uitvoeren van de applicatie: {e}")
 
 # Laad data
 sheet_verrijking = pd.read_excel(xls, sheet_name='Verrijkte data')

@@ -12,6 +12,11 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 st.set_page_config(layout="wide")
 st.title("\U0001F4CA Voorspelling van Jeugdzorg- en WMO-voorzieningen per wijk (2025–2030)")
 
+st.markdown("""
+test 123
+""")
+
+
 # === 1. Data inladen ===
 excel_path = "Data onderzoek Anwar NIEUW.xlsx"
 xls = pd.ExcelFile(excel_path)

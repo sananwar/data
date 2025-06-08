@@ -13,10 +13,13 @@ st.set_page_config(layout="wide")
 st.title("\U0001F4CA Voorspelling van Jeugdzorg- en WMO-voorzieningen per wijk (2025–2030)")
 
 st.markdown("""
-test 123
+Welkom bij deze interactieve applicatie voor beleidsanalyse.
+
+Deze tool voorspelt het verwachte gebruik van Jeugdzorg- en WMO-voorzieningen per wijk voor de jaren 2025 tot en met 2030.  
+Door gebruik te maken van historische data en verwachte groei in huishoudens, krijg je inzicht in trends en toekomstige zorgbehoeften per wijk.
+
+Scrol omlaag om de modelresultaten en interactieve grafieken te bekijken.
 """)
-
-
 # === 1. Data inladen ===
 excel_path = "Data onderzoek Anwar NIEUW.xlsx"
 xls = pd.ExcelFile(excel_path)

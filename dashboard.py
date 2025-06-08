@@ -12,21 +12,9 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 st.set_page_config(layout="wide")
 st.title("\U0001F4CA Voorspelling van Jeugdzorg- en WMO-voorzieningen per wijk (2025–2030)")
 
-st.markdown("""
-Welkom bij deze interactieve applicatie voor beleidsanalyse.
-
-Deze tool voorspelt het verwachte gebruik van Jeugdzorg- en WMO-voorzieningen per wijk voor de jaren 2025 tot en met 2030.  
-Door gebruik te maken van historische data en verwachte groei in huishoudens, krijg je inzicht in trends en toekomstige zorgbehoeften per wijk.
-
-Scrol omlaag om de modelresultaten en interactieve grafieken te bekijken.
-""")
-
-try:
-    excel_path = "Data onderzoek Anwar NIEUW.xlsx"
-    xls = pd.ExcelFile(excel_path)
-    ...
-except Exception as e:
-    st.error(f"Er ging iets mis bij het uitvoeren van de applicatie: {e}")
+# === 1. Data inladen ===
+excel_path = "Data onderzoek Anwar NIEUW.xlsx"
+xls = pd.ExcelFile(excel_path)
 
 # Laad data
 sheet_verrijking = pd.read_excel(xls, sheet_name='Verrijkte data')
